@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+  --color-page: #FFFFFF;
+  --color-surface: #F7F7F7;
+  --color-strong: #E5E5E5;
+  --color-text: #000000;
+  --color-accent: #FCA311;
+
+  --color-page-dark: #000000;
+  --color-surface-dark: #0B1220;
+  --color-strong-dark: #14213D;
+  --color-text-dark: #FFFFFF;
+}
+
+.font-instrument {
+  font-family: "Instrument Serif", serif;
+}
