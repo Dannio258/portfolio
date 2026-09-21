@@ -10,8 +10,8 @@ type NavbarProps = {
 function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   return (
     <>
-      <nav className="w-[90%] sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto flex py-3 px-4 items-center outline-amber-50 outline-1 rounded-xl bg-surface dark:bg-surface-dark text-text dark:text-text-dark">
-        <p>DK</p>
+      <nav className="w-[90%] sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto flex py-3 px-4 items-center outline-slate-200 outline-1 rounded-xl dark:bg-surface-dark text-text dark:text-text-dark">
+        <p className="text-2xl">DK</p>
         <div className="flex items-center ml-auto gap-10">
           <ul>
             <li>
@@ -20,17 +20,17 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           </ul>
           <ul>
             <li>
-              <Link to={"/"}>About</Link>
+              <Link to={"/about"}>About</Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link to={"/"}>Projects</Link>
+              <Link to={"/projects"}>Projects</Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link to={"/"}>Contact</Link>
+              <Link to={"/contant"}>Contact</Link>
             </li>
           </ul>
           <button onClick={() => setDarkMode((prev) => !prev)}>
