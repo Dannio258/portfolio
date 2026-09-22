@@ -1,5 +1,6 @@
 import Navbar from "./pageComponents/Navbar";
 import { useState, useEffect } from "react";
+import Sidebar from "./pageComponents/Sidebar";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -9,7 +10,13 @@ function App() {
 
   return (
     <div className="w-full h-dvh pt-6 bg-page dark:bg-black">
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <div className="md:hidden">
+        <Sidebar darkMode={darkMode} setDarkMode={setDarkMode} />
+      </div>
+
+      <div className="hidden md:block">
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      </div>
     </div>
   );
 }
