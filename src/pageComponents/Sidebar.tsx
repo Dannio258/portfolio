@@ -22,7 +22,7 @@ function Sidebar({ darkMode, setDarkMode }: NavbarProps) {
     <>
       <nav
         className={`
-    text-sm flex flex-col px-2 py-2
+    text-xl flex flex-col px-2 py-2
     outline-slate-200
     outline-1
     dark:outline-none 
@@ -36,10 +36,10 @@ function Sidebar({ darkMode, setDarkMode }: NavbarProps) {
     }
   `}
       >
-        <div className="flex justify-between">
-          <p className="text-2xl">DK</p>
+        <div className="flex justify-between items-center">
+          <p className="text-3xl">DK</p>
           <button
-            className="size-8"
+            className="size-12"
             onClick={() => setIsOpen((previous) => !previous)}
           >
             {isOpen ? <CloseIcon /> : <BurgerIcon />}
@@ -92,7 +92,7 @@ function Sidebar({ darkMode, setDarkMode }: NavbarProps) {
               }}
             >
               <ModeIcon
-                className={`size-8 transition-transform duration-300 ${
+                className={`size-12 transition-transform duration-300 ${
                   darkMode ? "text-accent rotate-270" : "text-blue-700 rotate-0"
                 }`}
               />

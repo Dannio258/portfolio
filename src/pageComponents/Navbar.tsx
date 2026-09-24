@@ -16,8 +16,8 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
     }`;
   return (
     <>
-      <nav className="w-[90%] sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto text-sm md:text-lg lg:text-xl flex py-3 px-4 items-center outline-slate-200 outline-1 rounded-xl dark:bg-surface-dark text-text dark:text-text-dark">
-        <p className="text-2xl">DK</p>
+      <nav className="w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto md:text-lg lg:text-xl xl:text-2xl flex p-4 items-center outline-slate-200 outline-1 rounded-xl dark:bg-surface-dark text-text dark:text-text-dark">
+        <p className="text-4xl">DK</p>
         <div className="flex items-center ml-auto gap-10">
           <ul className="flex items-center gap-10">
             <li>
@@ -43,7 +43,7 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           </ul>
           <button onClick={() => setDarkMode((prev) => !prev)}>
             <ModeIcon
-              className={`size-8 transition-transform duration-300 ${
+              className={`size-8 lg:size-10 transition-transform duration-300 ${
                 darkMode ? "text-accent rotate-270" : "text-blue-700 rotate-0"
               }`}
             />
