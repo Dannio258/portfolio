@@ -2,29 +2,32 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import NotFoundPage from "./pageComponents/NotFoundPage.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/home",
-    element: <App />,
-  },
-  {
-    path: "/about",
-    element: <App />,
-  },
-  {
-    path: "/projects",
-    element: <App />,
-  },
-  {
-    path: "/contact",
-    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "about",
+        // element: <About/>,
+      },
+      {
+        path: "projects",
+        // element: <projects/>,
+      },
+      {
+        path: "contact",
+        // element: <contact/>,
+      },
+    ],
   },
   {
     path: "*",

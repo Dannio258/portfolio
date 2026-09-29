@@ -2,6 +2,7 @@ import Navbar from "./pageComponents/Navbar";
 import { useState, useEffect } from "react";
 import Sidebar from "./pageComponents/Sidebar";
 import Footer from "./pageComponents/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -10,7 +11,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="w-full min-h-dvh pt-6 md:pb-6 bg-page flex flex-col dark:bg-black font-verdana">
+    <div className="bg-page font-verdana flex min-h-dvh w-full flex-col pt-6 md:pb-6 dark:bg-black">
       <div className="md:hidden">
         <Sidebar darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
@@ -18,8 +19,9 @@ function App() {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
 
-      <main className="flex-1"></main>
-
+      <main className="flex-1 mx-auto my-10 w-[90%]">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
